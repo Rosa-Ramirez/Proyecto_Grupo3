@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+package Servlet;
 
-import Class.Entry;
-import Class.EntryArray;
+import Java.Driver;
+import Java.DriverArray;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -17,12 +18,12 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author Hatziry Chacón
  */
-@WebServlet(urlPatterns = {"/UserController"})
-public class UserController extends HttpServlet {
+@WebServlet(urlPatterns = {"/DriverServlet"})
+public class DriverServlet extends HttpServlet {
 
-    Entry entry;
-    EntryArray registerEntry;
-    StringBuffer objectResponse = new StringBuffer();
+    Driver piloto;
+    DriverArray registroArray;
+    StringBuffer objetoRespuesta = new StringBuffer();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,26 +37,26 @@ public class UserController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            registerEntry = new EntryArray();
+        try ( PrintWriter respuesta = response.getWriter()) {
+            registroArray = new DriverArray();
             String control = request.getParameter("control");
+            
+            if (control.toUpperCase().equals("GUARDAR")) {
+                piloto = new Driver(
+                        Integer.parseInt(request.getParameter("dpi")),//Nombre de los ID que colocamos a cada input en index
+                        Integer.parseInt(request.getParameter("telefono")),
+                        request.getParameter("nombre"),
+                        request.getParameter("apellido"),
+                        request.getParameter("direccion"));
+                registroArray.guardarPilotoBD(piloto);//Almacenar en BD
 
-            if (control.toUpperCase().equals("SAVE")) {
-                entry = new Entry(
-                        request.getParameter("time"),
-                        Integer.parseInt(request.getParameter("day")),
-                        request.getParameter("monthYear"),
-                        request.getParameter("origin"),
-                        request.getParameter("cargoType"),
-                        request.getParameter("depot")
-                );
-                registerEntry.registerEntry(entry);
-            } else if (control.toUpperCase().equals("DELETE")) {
-                int codeDelete = Integer.parseInt(request.getParameter("id_Registro_Ingreso"));
-                registerEntry.deleteEntry(codeDelete);
+            } else if (control.toUpperCase().equals("ELIMINAR")) {
+                int codigoEliminar = Integer.parseInt(request.getParameter("dpi_piloto"));//Nombre de encabezado de tabla Mysql con not null
+                registroArray.eliminarPiloto(codigoEliminar);
             }
-            registerEntry.getEntry(objectResponse);
-            out.write(objectResponse.toString());
+
+            registroArray.getPiloto(objetoRespuesta);//consultar registro cliente en el BD
+            respuesta.write(objetoRespuesta.toString());
         }
     }
 
