@@ -163,6 +163,10 @@ CREATE TABLE IF NOT EXISTS `Transportes_Ultrarrápidos_SA`.`Registro_Egreso` (
     REFERENCES `Transportes_Ultrarrápidos_SA`.`Camion` (`Placa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+FOREIGN KEY (`Bodega_id_Bodega`)
+    REFERENCES `Transportes_Ultrarrápidos_SA`.`Bodega` (`id_Bodega`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
