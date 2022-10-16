@@ -31,7 +31,7 @@ public class TruckArray {
     }
     
     public String registerTruck(Truck camion){        
-        String sql = "INSERT INTO transportes_ultrarrápidos_sa.camion(Placa, Modelo, Capacidad_peso, Hora)  ";
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa, modelo, capacidad_peso, hora)  ";
              sql += " VALUES( ?,?,?,?)"; 
         try{
             abrirConexion();
@@ -53,7 +53,7 @@ public class TruckArray {
     }
 
     public String eliminarAlumno(int idTruck){
-        String sql = "DELETE FROM Placa WHERE Placa = "+idTruck;
+        String sql = "DELETE FROM camion WHERE placa = "+idTruck;
         try{
             abrirConexion();
             statement = conexion.prepareStatement(sql);

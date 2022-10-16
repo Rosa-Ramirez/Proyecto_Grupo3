@@ -51,10 +51,9 @@ StringBuffer objectResponse = new StringBuffer();
                                              registerEntry.registerEntry(entry);
                            }
                            else if(control.toUpperCase().equals("DELETE")){
-                                    int codeDelete = Integer.parseInt(request.getParameter("id_Registro_Ingreso"));
+                                    int codeDelete = Integer.parseInt(request.getParameter("id_registro_ingreso"));
                                     registerEntry.deleteEntry(codeDelete);
                            }
-                           registerEntry.getEntry(objectResponse);
                         out.write(objectResponse.toString());
 
         }

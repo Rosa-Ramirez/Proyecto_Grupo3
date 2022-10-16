@@ -33,17 +33,18 @@ public class EgressArray {
     }
     
     public String registerEgress(Egress egress){        
-        String sql = "INSERT INTO transportes_ultrarrápidos_sa.registro_egreso(hora, dia, mes_año, Destino, Tipo_Carga, Bodega_id_Bodega) ";
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_egreso( id_bodega, hora, dia, mes_anio, destino, tipo_carga) ";
              sql += " VALUES(  ?,?,?,?,?,?)"; 
         try{
             openConnection();
             statement = connection.prepareStatement(sql); 
-            statement.setString(1, egress.getTime());
-            statement.setInt(2, egress.getDay());
-            statement.setString(3, egress.getMonthYear());
-            statement.setString(4, egress.getDestiny());
-            statement.setString(5, egress.getCargoType());
-            statement.setString(6, egress.getDepot());
+            statement.setString(1, egress.getDepot());
+            statement.setString(2, egress.getTime());
+            statement.setInt(3, egress.getDay());
+            statement.setString(4, egress.getMonthYear());
+            statement.setString(5, egress.getDestiny());
+            statement.setString(6, egress.getCargoType());
+            
             int resultado = statement.executeUpdate(); 
             
                 if(resultado > 0){
@@ -56,7 +57,7 @@ public class EgressArray {
         }    
     }
         public String deleteEgress(int idEgress){
-        String sql = "DELETE FROM registro_egreso WHERE id_Registro_Egreso = "+idEgress;
+        String sql = "DELETE FROM registro_egreso WHERE id_registro_egreso = "+idEgress;
         try{
             openConnection();
             statement = connection.prepareStatement(sql);
