@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import Class.TransArray;
+import Class.TransModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -15,9 +17,11 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author ramir
  */
-@WebServlet(urlPatterns = {"/TransporterForm"})
+@WebServlet(urlPatterns = {"/TransporterController"})
 public class TransporterController extends HttpServlet {
-
+TransModel trans;
+TransArray registerTrans;
+StringBuffer objectResponse = new StringBuffer();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -29,19 +33,32 @@ public class TransporterController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet TransporterForm</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet TransporterForm at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+    
+                       
+                           registerTrans = new TransArray();
+                           String control = request.getParameter("control");
+                           if(control.toUpperCase().equals("GUARDAR")){
+                                    trans = new TransModel(
+                                             Integer.parseInt(request.getParameter("code")),
+                                             request.getParameter("name"),
+                                             request.getParameter("lastname"),
+                                             request.getParameter("email"),
+                                              request.getParameter("license"));
+                                             registerTrans.saveTrans(trans);
+                           }
+                           else if(control.toUpperCase().equals("ELIMINAR")){
+                                    int codeDelete = Integer.parseInt(request.getParameter("id_Transportista"));
+                                    registerTrans.deleteTrans(codeDelete);
+                                              
+                            
+                           }
+          
+            out.write(objectResponse.toString()); 
+       
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
