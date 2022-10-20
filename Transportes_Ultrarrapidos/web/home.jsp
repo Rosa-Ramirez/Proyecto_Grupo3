@@ -11,6 +11,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <% 
+        response.setHeader("Cache-Control", "nocache, no-store, must-revalidate");
+        if(session.getAttribute("user")==null){
+            response.sendRedirect("/index.jsp");
+        }
+    %>
     <body>
+        <h1>Holis</h1>
     </body>
 </html>
