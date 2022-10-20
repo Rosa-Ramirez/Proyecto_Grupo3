@@ -31,16 +31,16 @@ public class CamionController {
     }
     
     public String guardarAlumno2(Camion camion){        
-        String sql = "INSERT INTO transportes_ultrarrápidos_sa.camion(Placa, Modelo, Capacidad_peso, Hora)  ";
-             sql += " VALUES(  ?,?,?,?)"; 
+        String sql = "INSERT INTO transportes_ultrarrápidos_sa.camion(Placa, Matricula, Modelo, Capacidad_peso, Hora)  ";
+             sql += " VALUES(  ?,?,?,?,?)"; 
         try{
             abrirConexion();
             statement = conexion.prepareStatement(sql); 
             statement.setString(1, camion.getPlaca());
-            
-            statement.setString(2, camion.getModelo());
-            statement.setString(3, camion.getCapacidad());
-            statement.setString(4, camion.getHora());
+            statement.setString(2, camion.getMatricula());
+            statement.setString(3, camion.getModelo());
+            statement.setString(4, camion.getCapacidad());
+            statement.setString(5, camion.getHora());
             int resultado = statement.executeUpdate(); 
             
                 if(resultado > 0){
@@ -70,7 +70,7 @@ public class CamionController {
                      );
                 respuesta.append("<tr>");
                 respuesta.append("<td >").append(result.getString("Placa")).append("</td>");
-               
+                respuesta.append("<td >").append(result.getString("Matricula")).append("</td>");
                 respuesta.append("<td >").append(result.getString("Modelo")).append("</td>");
                 respuesta.append("<td >").append(result.getString("Capacidad_peso")).append("</td>");
                 respuesta.append("<td >").append(result.getString("Hora")).append("</td>");

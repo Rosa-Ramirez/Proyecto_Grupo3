@@ -51,7 +51,7 @@ public class NewServlet extends HttpServlet {
                 out.println("<script>console.log('Hola3')</script>");
                camion=new Camion(
                 request.getParameter("Placa"),
-    
+             request.getParameter("Matricula"),
             request.getParameter("Modelo"),
       request.getParameter("Capacidad_peso"),
               request.getParameter("Hora")); 

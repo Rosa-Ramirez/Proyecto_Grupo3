@@ -6,15 +6,15 @@ package Clases;
 
 public class Camion{
     private String Placa;
-    private int id_Transportista;
+    private String Matricula;
     private String Modelo;
     private String Capacidad_peso;
     private String Hora;
    
     
-    public Camion(String Placa, String Modelo, String Capacidad_peso, String Hora){
+    public Camion(String Placa, String Matricula, String Modelo, String Capacidad_peso, String Hora){
     this.Placa = Placa;
-    
+    this.Matricula=Matricula;
     this.Modelo = Modelo;
     this.Capacidad_peso = Capacidad_peso;
     this.Hora = Hora;
@@ -28,12 +28,12 @@ public class Camion{
         this.Placa = Placa;
     }
 
-    public int getTransportista() {
-        return id_Transportista;
+    public String getMatricula() {
+        return Matricula;
     }
 
-    public void setTransportista(int id_Transportista) {
-        this.id_Transportista = id_Transportista;
+    public void setMatricula(String Matricula) {
+        this.Matricula = Matricula;
     }
 
     public String getModelo() {
