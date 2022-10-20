@@ -12,9 +12,9 @@ package Clases;
  */
 public class ConexionBaseDeDatos {
     
-    private final String url="jdbc:mysql://localhost:3306/transportes_ultrarrápidos_sa";//url de MySQL
-    private final String usuario="Romeo";
-    private final String clave="";
+    private final String url="jdbc:mysql://localhost:3306/transportes_ultrarrapidos_sa";//url de MySQL
+    private final String usuario="root";
+    private final String clave="root";
     Connection conexion=null;  
     public Connection conectar(){
         

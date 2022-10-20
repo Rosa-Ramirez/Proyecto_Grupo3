@@ -31,7 +31,7 @@ public class CamionController {
     }
     
     public String guardarAlumno2(Camion camion){        
-        String sql = "INSERT INTO transportes_ultrarrápidos_sa.camion(Placa, Matricula, Modelo, Capacidad_peso, Hora)  ";
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa, matricula, modelo, capacidad_peso, hora)  ";
              sql += " VALUES(  ?,?,?,?,?)"; 
         try{
             abrirConexion();
