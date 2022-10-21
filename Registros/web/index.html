@@ -10,21 +10,31 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/script.js"></script>
 
-        <style>
-            *{
+      <style>
+           *{
                 margin: 0;
                 padding: 0;
             }
             body{
                 min-height: 100vh;
-                background-image: url(https://fondosmil.com/fondo/13556.jpg);
+                background-image: url(./images/carretera.jpg);
                 background-size: 100%;
                 background-position: center center;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-        </style>  
+            .header .navbar {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 10%;
+                background: rgba(0,0,0,0.6);
+                font-family:sans-serif;
+            }   
+        </style>
     </head>
     <body>
         <div class="d-flex justify-content-around mx-4 my-5">
@@ -41,8 +51,8 @@
                                 <input type="hidden" name="control" value="GUARDAR">
                             </div>
                             <div class="col">
-                                <label for="id_Transportista">Matrícula</label>
-                                <input type="text" class="form-control" placeholder="No. de Matrícula" name="id_Transportista" id="id_Transportista">
+                                <label for="Matricula">Matrícula</label>
+                                <input type="text" class="form-control" placeholder="No. de Matrícula" name="Matricula" id="Matricula">
                             </div>
                         </div>
                         <div class="row my-3">
