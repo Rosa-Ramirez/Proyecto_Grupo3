@@ -11,3 +11,6 @@ function signup()
 container.classList.add('right-panel-active');
 }
 
+function showMessage(){
+    
+};

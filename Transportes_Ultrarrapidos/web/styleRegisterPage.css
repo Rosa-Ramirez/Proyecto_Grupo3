@@ -1,6 +1,7 @@
 * {
 box-sizing: border-box;
 }
+
 body {
 display: flex;
 justify-content: center;
@@ -33,7 +34,7 @@ margin: 15px 0;
 button {
 border-radius: 20px;
 border: 1px solid #FF7585;
-background-color:#ff7585;
+background-color:#01DEA4;
 color: #FFFFFF;
 font-size: 12px;
 font-weight: bold;

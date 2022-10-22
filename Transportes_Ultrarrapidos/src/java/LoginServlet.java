@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -31,11 +28,10 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-          
           if(request.getSession().getAttribute("user")==null){
 //               response.sendRedirect(request.getContextPath()+"/index.jsp");
                request.setAttribute("success", 0);
-                request.getRequestDispatcher("/login.jsp").forward(request, response);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
            }else{
               request.setAttribute("UsuarioLogueado", request.getSession().getAttribute("user"));
                request.getRequestDispatcher("home.jsp").forward(request, response);
