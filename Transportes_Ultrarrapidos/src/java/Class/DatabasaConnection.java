@@ -19,7 +19,6 @@ public class DatabasaConnection {
     Connection conn=null;  
     public Connection connection(){
         
-        
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn=DriverManager.getConnection( url, usuario,clave);

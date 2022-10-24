@@ -5,6 +5,7 @@
 
 import Class.Entry;
 import Class.EntryArray;
+import Class.Time;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -21,6 +22,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class EntryController extends HttpServlet {
 Entry entry;
 EntryArray registerEntry;
+Time time;
 StringBuffer objectResponse = new StringBuffer();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,17 +40,14 @@ StringBuffer objectResponse = new StringBuffer();
          /* TODO output your page here. You may use following sample code. */
            registerEntry= new EntryArray();
                            String control = request.getParameter("control");
-
                            if(control.toUpperCase().equals("SAVE")){
                                     entry = new Entry(
-                                             request.getParameter("time"),
-                                             Integer.parseInt(request.getParameter("day")),
-                                            request.getParameter("monthYear"),
                                             request.getParameter("origin"),
                                             request.getParameter("cargoType"),
                                             request.getParameter("depot") 
                                     );
                                              registerEntry.registerEntry(entry);
+                                             
                            }
                            else if(control.toUpperCase().equals("DELETE")){
                                     int codeDelete = Integer.parseInt(request.getParameter("id_registro_ingreso"));
