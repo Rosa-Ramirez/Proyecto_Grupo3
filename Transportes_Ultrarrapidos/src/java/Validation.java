@@ -1,9 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 
-import Class.User;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -18,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = {"/Validation"})
 public class Validation extends HttpServlet {
-User user;
+    User user;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,15 +28,14 @@ User user;
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            
            user = new User();
            String usr = request.getParameter("user");
            String pass = request.getParameter("pass");
            
-           if(usr.equals(" ")||pass.equals(" ")){
+           if(usr.equals("")||pass.equals("")){
                request.setAttribute("success", 0);
                request.setAttribute("message", "Campo usuario y contraseña son requeridos");
-               request.getRequestDispatcher("/login.jsp").forward(request, response);
+               request.getRequestDispatcher("/index.jsp").forward(request, response);
            }
            
            String userConsulted = user.userValidation(request.getParameter("user"), request.getParameter("pass"));
@@ -50,8 +45,8 @@ User user;
                response.sendRedirect(request.getContextPath()+"/LoginServlet");
            }else{
                request.setAttribute("success", 0);
-               request.setAttribute("message", "Usuario y/o contraseña no encontrado");
-               request.getRequestDispatcher("/login.jsp").forward(request, response);
+               request.setAttribute("message","Usuario y/o contraseña no encontrado");
+               request.getRequestDispatcher("/index.jsp").forward(request, response);
            }
         }
     }
