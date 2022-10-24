@@ -40,7 +40,7 @@ public class Time {
             openConnection();
             statement = connection.prepareStatement(sql); 
             statement.setString(1, hour+":"+minute);
-            statement.setString(2, day+"/"+month+"/"+year);
+            statement.setString(2, day+"-"+month+"-"+year);
             int resultado = statement.executeUpdate(); 
             
                 if(resultado > 0){
