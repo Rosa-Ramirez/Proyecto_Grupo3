@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @author ramir
  */
 public class DatabasaConnection {
-    protected String url="jdbc:mysql://localhost:3306/transportes_ultrarrapidos_sa";//url de MySQL
+        protected String url="jdbc:mysql://localhost:3306/transportes_ultrarrapidos_sa";//url de MySQL
     private final String usuario="root";
     private final String clave="root";
     Connection conn=null;  
