@@ -17,7 +17,7 @@
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <link href="tableStyle.css" rel="stylesheet" type="text/css"/>
+       
         <title>JSP Page</title>
     </head>
     <body>
@@ -100,14 +100,14 @@
     ps=conn.prepareStatement("select * from registro_ingreso");
     rs=ps.executeQuery();
         %>
-        <div class="container">
-            <div class="container search">
-                <form class="form">
-            <input type="text" name="txtsearch" class="form-control">
-        <input type="submit" value="search" class="btn btn-outline-success">
-        </form>
+        <div class="container mx-auto">
+            <div class="d-flex justify-content-end mx-5 my-4">
+               <form class="d-flex " role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                 </div>
-            <div class="table-responsive">
+            <div class="table-responsive mx-4 my-4">
         <table class="table table-hover table-dark">
             <tr>
                 <th scope="col">ID</th>
