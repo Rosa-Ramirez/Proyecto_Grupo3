@@ -48,6 +48,7 @@
                                     <li><a class="dropdown-item" href="TruckForm.html">Registrar Camión</a></li>
                                     <li><a class="dropdown-item" href="EntryForm.html">Registrar Ingreso</a></li>
                                     <li><a class="dropdown-item" href="TransporterForm.jsp">Registrar Transportista</a></li>
+                                    <li><a class="dropdown-item" href="Report.jsp">Reporte</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="Logout">Cerrar Sesion - ${UsuarioLogueado}</a></li>
                                 </ul>
