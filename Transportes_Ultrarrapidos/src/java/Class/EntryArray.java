@@ -34,7 +34,7 @@ public class EntryArray{
     
     public String registerEntry(Entry entry){  
      
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(hora, dia, origen, tipo_carga, id_bodega) ";
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(hora, dia, origen, tipo_carga, id_bodega, id_dpi_piloto, camion_placa, id_predio, transportista) ";
              sql += " VALUES( ?,?,?,?,?)"; 
         try{
             openConnection();
@@ -44,6 +44,10 @@ public class EntryArray{
             statement.setString(5, entry.getDepot());
             statement.setString(3, entry.getOrigin());
             statement.setString(4, entry.getCargoType());
+            statement.setString(6, entry.getDpiDriver());
+            statement.setString(7, entry.getPlateTruck());
+            statement.setString(8, entry.getLot());
+            statement.setString(9, entry.getTransporter());
             
             int resultado = statement.executeUpdate(); 
             

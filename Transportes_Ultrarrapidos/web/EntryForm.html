@@ -95,7 +95,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <img src="images/Imagen2.png" class="rounded mx-auto d-block" width="160" alt="..."/>
                         <h2 class="display-4 text-center my-4"> REGISTRO INGRESO</h2>
                         <div class="row my-3">
-
+                            <div class="col">
+                            <label for="dpiDriver">DPI Piloto</label>
+                            <input type="text" class="form-control" placeholder="DPI del piloto" name="dpiDriver" id="dpiDriver">
+                            </div>
+                            <div class="col">
+                            <label for="dpiTransporter">DPI Transportista</label>
+                            <input type="text" class="form-control" placeholder="Place del camión" name="dpiTransporter" id="dpiTransporter">
+                            </div>
+                            <div class="col">
+                            <label for="plate">Placa</label>
+                            <input type="text" class="form-control" placeholder="Place del camión" name="plate" id="plate">
+                            </div>
                         </div>
                         <div class="row my-3">
                             <div class="col">
@@ -119,11 +130,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                     <option value="3">Principal El Salvador</option>
                                     <option value="4">Secundaria El Salvador</option>
                                 </select>
+                                <select class="form-select" id="lot" name="lot">
+                                    <option selected>Predio...</option>
+                                    <option value="1">Guatemala</option>
+                                    <option value="2">El Salvador</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="my-3">
+                        
+                        <div class="row my-3">
+                            <div class="col">
                             <label for="origin">Origen</label>
                             <input type="text" class="form-control" placeholder="Origen de Carga" name="origin" id="origin">
+                            </div>
                         </div>
                         <input type="button" onclick="sendForm()" class="btn btn-outline-success" value="Register">
                         <button type="reset" class="btn btn-outline-danger">Vaciar</button>

@@ -48,7 +48,11 @@ StringBuffer objectResponse = new StringBuffer();
                                             time.getDay(),
                                             request.getParameter("origin"),
                                             request.getParameter("cargoType"),
-                                            request.getParameter("depot") 
+                                            request.getParameter("depot"),
+                                            request.getParameter("dpiDriver"),
+                                            request.getParameter("plate"),
+                                            request.getParameter("dpiTransporter"),
+                                            request.getParameter("lot")
                                     );
                                     
                                              registerEntry.registerEntry(entry);
