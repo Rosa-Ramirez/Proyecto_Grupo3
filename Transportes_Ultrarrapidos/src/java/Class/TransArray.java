@@ -27,8 +27,8 @@ public class TransArray {
     }
 
     public String saveTrans( TransModel trans){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.transportista(id_transportista, nombre, apellido, correo, carne_de_conducir, camion_placa)  ";
-             sql += " VALUES(  ?,?,?,?,?,?)"; 
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.transportista(id_transportista, nombre, apellido, correo, carne_de_conducir)  ";
+             sql += " VALUES(  ?,?,?,?,?)"; 
         try{
             openConnection();
             statement = connection.prepareStatement(sql); 
@@ -37,7 +37,6 @@ public class TransArray {
             statement.setString(3, trans.getLastName());
             statement.setString(4, trans.getEmail());
              statement.setString(5, trans.getLicense());
-             statement.setString(6, trans.getlicensePlate());
             int resultado = statement.executeUpdate(); 
             
                 if(resultado > 0){

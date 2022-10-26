@@ -13,13 +13,12 @@ public class TransModel{
     private String license;
     private String licensePlate;
     
-    public  TransModel(int code,  String name, String lastName,  String email,  String license, String licensePlate){
+    public  TransModel(int code,  String name, String lastName,  String email,  String license){
     this.code = code;
     this.name = name;
     this.lastName = lastName;
     this.email = email;
     this.license=license;
-    this.licensePlate=licensePlate;
     }
 
    

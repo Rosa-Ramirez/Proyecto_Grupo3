@@ -46,8 +46,7 @@ StringBuffer objectResponse = new StringBuffer();
                                              request.getParameter("name"),
                                              request.getParameter("lastname"),
                                              request.getParameter("email"),
-                                              request.getParameter("license"),
-                                             request.getParameter("truck")
+                                              request.getParameter("license")
                                     );
                                              registerTrans.saveTrans(trans);
                            }
