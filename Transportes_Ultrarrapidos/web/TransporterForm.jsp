@@ -73,7 +73,7 @@
                                      <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
                                     <li><a class="dropdown-item" href="DriverForm.html">Registrar Piloto</a></li>
                                     <li><a class="dropdown-item" href="TruckForm.html">Registrar Camión</a></li>
-                                    <li><a class="dropdown-item" href="TransporterForm.jsp">Registrar Transportista</a></li>
+                                    <li><a class="dropdown-item" href="EntryForm.html">Registrar Ingreso</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
@@ -100,9 +100,14 @@
                         <h2 class="display-4 text-center my-4">  REGISTRO DEL CONDUCTOR</h2>
                            <div class="row my-3">
                             <div class="col">
-                                <label for="codigo">Codigo Del Transportista</label>
-                                <input type="text" class="form-control" placeholder="codigo" name="code" id="code">
+                                <label for="codigo">DPI DEL TRANSPORTISTA</label>
+                                <input type="text" class="form-control" placeholder="DPI" name="code" id="code">
                                 <input type="hidden" name="control" value="GUARDAR">
+                                 </div>
+                                <div class="col">
+                                  <label for="codigo">PLACA DEL CAMEON</label>
+                                <input type="text" class="form-control" placeholder="Matricula O Placa " name="truck" id="truck">
+               
                             </div>
                         </div>
                         <div class="row my-3">
