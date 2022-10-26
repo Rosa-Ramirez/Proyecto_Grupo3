@@ -104,11 +104,6 @@
                                 <input type="text" class="form-control" placeholder="DPI" name="code" id="code">
                                 <input type="hidden" name="control" value="GUARDAR">
                                  </div>
-                                <div class="col">
-                                  <label for="codigo">PLACA DEL CAMEON</label>
-                                <input type="text" class="form-control" placeholder="Matricula O Placa " name="truck" id="truck">
-               
-                            </div>
                         </div>
                         <div class="row my-3">
                             <div class="col">
