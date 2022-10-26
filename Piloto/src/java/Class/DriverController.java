@@ -1,10 +1,12 @@
+package Class;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import Class.TransArray;
-import Class.TransModel;
+import Class.Driver;
+import Class.DriverArray;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -15,13 +17,15 @@ import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author ramir
+ * @author Hatziry Chacón
  */
-@WebServlet(urlPatterns = {"/TransporterController"})
-public class TransporterController extends HttpServlet {
-TransModel trans;
-TransArray registerTrans;
-StringBuffer objectResponse = new StringBuffer();
+@WebServlet(urlPatterns = {"/DriverController"})
+public class DriverController extends HttpServlet {
+
+    Driver driver;
+    DriverArray driverArray;
+    StringBuffer objectResponse = new StringBuffer();
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -33,35 +37,25 @@ StringBuffer objectResponse = new StringBuffer();
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-    
-                       
-                           registerTrans = new TransArray();
-                           
-                           String control = request.getParameter("control");
-                           if(control.toUpperCase().equals("GUARDAR")){
-                                    trans = new TransModel(
-                                             Integer.parseInt(request.getParameter("code")),
-                                             request.getParameter("name"),
-                                             request.getParameter("lastname"),
-                                             request.getParameter("email"),
-                                              request.getParameter("license"),
-                                             request.getParameter("truck")
-                                    );
-                                             registerTrans.saveTrans(trans);
-                           }
-                           else if(control.toUpperCase().equals("ELIMINAR")){
-                                    int codeDelete = Integer.parseInt(request.getParameter("id_Transportista"));
-                                    registerTrans.deleteTrans(codeDelete);
-                                              
-                            
-                           }
-          
-            out.write(objectResponse.toString()); 
-       
+            driverArray = new DriverArray();
+            String control = request.getParameter("control");
+            if (control.toUpperCase().equals("SAVE")) {
+                driver = new Driver(
+                        Integer.parseInt(request.getParameter("dpi")),
+                        request.getParameter("name"),
+                        request.getParameter("lastName"),
+                        Integer.parseInt(request.getParameter("phone")),
+                        request.getParameter("address")
+                );
+                driverArray.saveDriver(driver);
+            } else if (control.toUpperCase().equals("DELETE")) {
+                int codeDelete = Integer.parseInt(request.getParameter("id_dpi_piloto"));
+                driverArray.deleteDriver(codeDelete);
+            }
+            out.write(objectResponse.toString());
         }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
