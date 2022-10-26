@@ -119,8 +119,39 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                     <option value="3">Principal El Salvador</option>
                                     <option value="4">Secundaria El Salvador</option>
                                 </select>
+                                <select class="form-select" id="lot" name="lot">
+                                    <option selected>Predio...</option>
+                                    <option value="1">Guatemala</option>
+                                    <option value="2">El Salvador</option>
+                                </select>
                             </div>
                         </div>
+                        
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="cargoType">DPI</label>
+                                <select class="form-select" id="cargoType" name="cargoType">
+                                    <option selected>Carga...</option>
+                                    <option>General</option>
+                                    <option>A granel</option>
+                                    <option>Perecedera</option>
+                                    <option>Frágil</option>
+                                    <option>Peligrosa</option>
+                                </select>
+                                <input type="hidden" name="control" value="SAVE">
+                            </div>
+                            <div class="col">
+                                <label for="depot">Bodega</label>
+                                <select class="form-select" id="depot" name="depot">
+                                    <option selected>Bodega...</option>
+                                    <option value="1">Principal Guatemala</option>
+                                    <option value="2">Secundaria Guatemala</option>
+                                    <option value="3">Principal El Salvador</option>
+                                    <option value="4">Secundaria El Salvador</option>
+                                </select>
+                            </div>
+                        </div>
+                        
                         <div class="my-3">
                             <label for="origin">Origen</label>
                             <input type="text" class="form-control" placeholder="Origen de Carga" name="origin" id="origin">
