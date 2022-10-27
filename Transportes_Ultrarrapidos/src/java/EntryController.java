@@ -43,12 +43,16 @@ StringBuffer objectResponse = new StringBuffer();
                            String control = request.getParameter("control");
 
                            if(control.toUpperCase().equals("SAVE")){
-                                    entry = new Entry(
-                                            time.getTime(),
+                               entry = new Entry(
+                                       time.getTime(),
                                             time.getDay(),
                                             request.getParameter("origin"),
                                             request.getParameter("cargoType"),
-                                            request.getParameter("depot") 
+                                            request.getParameter("depot"),
+                                            request.getParameter("dpiDriver"),
+                                            request.getParameter("plate"),
+                                            request.getParameter("dpiTransporter"),
+                                            request.getParameter("lot")
                                     );
                                     
                                              registerEntry.registerEntry(entry);

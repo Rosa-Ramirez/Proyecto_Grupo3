@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/Angel%20Vargas/Downloads/AprendizajeJavaScriptGitHub/ProyectoProgramación/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/TruckController.java</file>
             <file>file:/C:/Users/Angel%20Vargas/Downloads/AprendizajeJavaScriptGitHub/ProyectoProgramación/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/LoginServlet.java</file>
@@ -11,5 +12,7 @@
             <file>file:/C:/Users/Angel%20Vargas/Downloads/AprendizajeJavaScriptGitHub/ProyectoProgramación/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/EntryController.java</file>
             <file>file:/C:/Users/Angel%20Vargas/Downloads/AprendizajeJavaScriptGitHub/ProyectoProgramación/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/Validation.java</file>
         </group>
+=======
+>>>>>>> bac885f20997d4db7e7eb8fac5ba6fd7c2890774
     </open-files>
 </project-private>

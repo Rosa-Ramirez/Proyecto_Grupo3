@@ -1,38 +1,31 @@
+package Class;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import Class.Time;
-import Class.TruckArray;
-import Class.Truck;
+import Class.Driver;
+import Class.DriverArray;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Fernanda Cordón
+ * @author Hatziry Chacón
  */
-@WebServlet(urlPatterns = {"/TruckController"})
-public class TruckController extends HttpServlet {
-    Truck truck;
-    TruckArray registerTruck;
-    StringBuffer obcjectResponse = new StringBuffer();
-    Time time;
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+@WebServlet(urlPatterns = {"/DriverController"})
+public class DriverController extends HttpServlet {
+
+    Driver driver;
+    DriverArray driverArray;
+    StringBuffer objectResponse = new StringBuffer();
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -46,28 +39,26 @@ public class TruckController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-         registerTruck=new TruckArray();
-           String control = request.getParameter("control");
-           if(control.toUpperCase().equals("GUARDAR")){
-               truck=new Truck(
-                     
-                request.getParameter("plate"),
-                request.getParameter("model"),
-                request.getParameter("trans"),       
-                request.getParameter("capacity"));
-                   
-                      
-                registerTruck.registerTruck(truck);//almacenarlo en BD      
+            driverArray = new DriverArray();
+            String control = request.getParameter("control");
+            if (control.toUpperCase().equals("SAVE")) {
+                driver = new Driver(
+                        Integer.parseInt(request.getParameter("dpi")),
+                        request.getParameter("name"),
+                        request.getParameter("lastName"),
+                        Integer.parseInt(request.getParameter("phone")),
+                        request.getParameter("address")
+                );
+                driverArray.saveDriver(driver);
+            } else if (control.toUpperCase().equals("DELETE")) {
+                int codeDelete = Integer.parseInt(request.getParameter("id_dpi_piloto"));
+                driverArray.deleteDriver(codeDelete);
+            }
+            out.write(objectResponse.toString());
         }
-            else if(control.toUpperCase().equals("DELETE")){
-                                    int codeDelete = Integer.parseInt(request.getParameter("plate"));
-                                    registerTruck.eliminarAlumno(codeDelete);
-    out.println("<script>console.log('Hola4')</script>");
-        }
-                        out.write(obcjectResponse.toString());
-    }   
     }
- // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -105,4 +96,5 @@ public class TruckController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

@@ -984,22 +984,28 @@ exists or setup the property manually. For example like this:
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
         <copyfiles files="${file.reference.mysql-connector-java-8.0.30.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <copyfiles files="${libs.jakartaee-api-8.0.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${libs.jakartaee-api-9.0.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
         <copyfiles files="${libs.MySQLDriver.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 >>>>>>> e2a5a5cf3ca17aa449e919191d7879c51c0b02b3
+=======
+>>>>>>> bac885f20997d4db7e7eb8fac5ba6fd7c2890774
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
         <copyfiles files="${file.reference.mysql-connector-java-8.0.30.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <copyfiles files="${libs.jakartaee-api-8.0.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.jakartaee-api-9.0.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
         <copyfiles files="${libs.MySQLDriver.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
 >>>>>>> e2a5a5cf3ca17aa449e919191d7879c51c0b02b3
+=======
+>>>>>>> bac885f20997d4db7e7eb8fac5ba6fd7c2890774
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>

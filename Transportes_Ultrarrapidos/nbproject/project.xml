@@ -7,14 +7,14 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-                    <file>${file.reference.mysql-connector-java-8.0.30.jar}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
-                </library>
-                <library dirs="200">
                     <file>${&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD}</file>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
                     <file>${libs.jakartaee-api-8.0.classpath}</file>
+=======
+                    <file>${file.reference.mysql-connector-java-8.0.30.jar}</file>
+>>>>>>> bac885f20997d4db7e7eb8fac5ba6fd7c2890774
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>

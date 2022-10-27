@@ -8,14 +8,14 @@ public class Truck{
     private String plate;
     private String model;
     private String capacity;
-    private String time;
-   
+    private String trans;
     
-    public Truck(String plate, String model, String capacity, String time){
+    public Truck(String plate, String trans, String model, String capacity ){
     this.plate = plate;
     this.model = model;
+    this.trans=trans;
     this.capacity = capacity;
-    this.time = time;
+   
     }
 
     public String getPlate() {
@@ -42,12 +42,13 @@ public class Truck{
         this.capacity = capacity;
     }
 
-    public String getTime() {
-        return time;
+  String getTrans() {
+        return trans;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTrans(String trans) {
+        this.trans = trans;
     }
+    
     
 }

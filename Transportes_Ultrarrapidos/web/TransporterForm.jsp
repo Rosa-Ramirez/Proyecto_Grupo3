@@ -20,16 +20,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="js/script.js"></script>
 
-        <style>
-           *{
+         <style>
+            *{
                 margin: 0;
                 padding: 0;
             }
             body{
                 min-height: 100vh;
-                background-image: url(./images/carretera.jpg);
+                background-image: radial-gradient(circle at 87.5% 12.5%, #5b96ff 0, #1c4884 50%, #00001b 100%);
                 background-size: 100%;
                 background-position: center center;
                 background-attachment: fixed;
@@ -45,7 +44,9 @@
                 padding: 30px 10%;
                 background: rgba(0,0,0,0.6);
                 font-family:sans-serif;
-            }   
+
+            }
+
         </style>  
         
     </head>
@@ -53,38 +54,35 @@
         <header class="header">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">
+                        <img src="https://materilejuguetes.com/img/entrega.png" width="60" height="60" alt="">
+                        Transportes Ultrarrápidos
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item active">
+                        <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
+                           
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" id="menu-navbar">
-                                     <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
+                                    <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
                                     <li><a class="dropdown-item" href="DriverForm.html">Registrar Piloto</a></li>
                                     <li><a class="dropdown-item" href="TruckForm.html">Registrar Camión</a></li>
                                     <li><a class="dropdown-item" href="TransporterForm.jsp">Registrar Transportista</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="login.jsp">Iniciar sesión o Registrarse</a></li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" href="Logout">Cerrar Sesion - ${UsuarioLogueado}</button>
+                            <a class="btn btn-outline-success"  href="Logout">Cerrar Sesion</a>
                         </form>
                     </div>
                 </div>
@@ -100,18 +98,18 @@
                         <h2 class="display-4 text-center my-4">  REGISTRO DEL CONDUCTOR</h2>
                            <div class="row my-3">
                             <div class="col">
-                                <label for="codigo">Codigo Del Transportista</label>
-                                <input type="text" class="form-control" placeholder="codigo" name="code" id="code">
+                                <label for="code">DPI DEL TRANSPORTISTA</label>
+                                <input type="text" class="form-control" placeholder="DPI" name="code" id="code">
                                 <input type="hidden" name="control" value="GUARDAR">
-                            </div>
+                                 </div>
                         </div>
                         <div class="row my-3">
                             <div class="col">
-                                <label for="Nombres">Nombres</label>
+                                <label for="name">Nombres</label>
                                 <input type="text" class="form-control" placeholder="Nombre" name="name" id="name">
                             </div>
                             <div class="col">
-                                <label for="Apellidos">Apellidos</label>
+                                <label for="lastname">Apellidos</label>
                                 <input type="text" class="form-control" placeholder="Apellido" name="lastname" id="lastname">
                             </div>
                           </div>
@@ -122,7 +120,7 @@
                     <small id="emailHelp" class="form-text text-muted">No comparta su correo electrónico con nadie más.</small>
                 </div>
                             <div class="col">
-                                <label for="telefono">Carnet De Conducir </label>
+                                <label for="license">Carnet De Conducir </label>
                                 <input type="text" class="form-control" placeholder="Carnet" name="license" id="license">
                             </div>
                         </div>
