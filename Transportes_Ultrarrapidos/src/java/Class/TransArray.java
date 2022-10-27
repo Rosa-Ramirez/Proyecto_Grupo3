@@ -27,7 +27,7 @@ public class TransArray {
     }
 
     public String saveTrans( TransModel trans){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.transportista(id_transportista, nombre, apellido, correo, carne_de_conducir)  ";
+
              sql += " VALUES(  ?,?,?,?,?)"; 
         try{
             openConnection();

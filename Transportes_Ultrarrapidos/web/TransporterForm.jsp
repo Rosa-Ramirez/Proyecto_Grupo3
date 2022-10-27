@@ -20,7 +20,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="js/scriptTrans.js" type="text/javascript"></script>
 
          <style>
             *{
@@ -99,18 +98,18 @@
                         <h2 class="display-4 text-center my-4">  REGISTRO DEL CONDUCTOR</h2>
                            <div class="row my-3">
                             <div class="col">
-                                <label for="codigo">DPI DEL TRANSPORTISTA</label>
+                                <label for="code">DPI DEL TRANSPORTISTA</label>
                                 <input type="text" class="form-control" placeholder="DPI" name="code" id="code">
                                 <input type="hidden" name="control" value="GUARDAR">
                                  </div>
                         </div>
                         <div class="row my-3">
                             <div class="col">
-                                <label for="Nombres">Nombres</label>
+                                <label for="name">Nombres</label>
                                 <input type="text" class="form-control" placeholder="Nombre" name="name" id="name">
                             </div>
                             <div class="col">
-                                <label for="Apellidos">Apellidos</label>
+                                <label for="lastname">Apellidos</label>
                                 <input type="text" class="form-control" placeholder="Apellido" name="lastname" id="lastname">
                             </div>
                           </div>
@@ -121,7 +120,7 @@
                     <small id="emailHelp" class="form-text text-muted">No comparta su correo electrónico con nadie más.</small>
                 </div>
                             <div class="col">
-                                <label for="telefono">Carnet De Conducir </label>
+                                <label for="license">Carnet De Conducir </label>
                                 <input type="text" class="form-control" placeholder="Carnet" name="license" id="license">
                             </div>
                         </div>
