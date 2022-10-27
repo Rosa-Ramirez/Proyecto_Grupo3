@@ -13,11 +13,12 @@ import java.sql.SQLException;
  *
  * @author ramir
  */
-public class EntryArray {
+public class EntryArray extends Time{
     Entry[] entryRegister;
     int indexArray;
+    Time time;
     
-    private DatabasaConnection connectDB;
+//    private DatabasaConnection connectDB;
     private Connection connection;
     private PreparedStatement statement = null;
     private ResultSet resultSet = null;
@@ -27,26 +28,19 @@ public class EntryArray {
         this.indexArray = 0;
     }
     
-    public void openConnection(){
-        connectDB= new DatabasaConnection();
-        connection=connectDB.connection();
-    }
-    
     public String registerEntry(Entry entry){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(id_bodega, hora, dia, mes_anio, origen, tipo_carga) ";
-             sql += " VALUES(  ?,?,?,?,?,?)"; 
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(id_bodega, hora, dia, origen, tipo_carga) ";
+             sql += " VALUES(  ?,?,?, ?, ?)"; 
         try{
             openConnection();
-            statement = connection.prepareStatement(sql); 
-            statement.setString(2, entry.getTime());
-            statement.setInt(3, entry.getDay());
-            statement.setString(4, entry.getMonthYear());
-            statement.setString(5, entry.getOrigin());
-            statement.setString(6, entry.getCargoType());
+            statement = connection.prepareStatement(sql);
+            statement.setString(2, hour+":"+minute);
+            statement.setString(3, day+"/"+month+"/"+year);
+            statement.setString(4, entry.getOrigin());
+            statement.setString(5, entry.getCargoType());
             statement.setString(1, entry.getDepot());
             
             int resultado = statement.executeUpdate(); 
-            
                 if(resultado > 0){
                     return String.valueOf(resultado);
                 }else{
