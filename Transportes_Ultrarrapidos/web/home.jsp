@@ -70,8 +70,8 @@
                             </li>
                            
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Records
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" id="menu-navbar">
                                     <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
@@ -84,7 +84,7 @@
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
-                            <a class="btn btn-outline-success"  href="Logout">Cerrar Sesion</a>
+                            <a class="btn btn-info"  href="Logout">Cerrar Sesion</a>
                         </form>
                     </div>
                 </div>

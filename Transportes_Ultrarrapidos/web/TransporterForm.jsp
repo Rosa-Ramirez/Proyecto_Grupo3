@@ -8,8 +8,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-        <title>Driver Record</title>
-         <title>Driver Record</title>
+        <title>Transporter Record</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -67,9 +66,9 @@
                         <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
                             </li>
                            
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown active">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                                    Records
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" id="menu-navbar">
                                     <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
@@ -82,7 +81,7 @@
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
-                            <a class="btn btn-outline-success"  href="Logout">Cerrar Sesion</a>
+                            <a class="btn btn-info"  href="Logout">Cerrar Sesion</a>
                         </form>
                     </div>
                 </div>
@@ -94,11 +93,11 @@
             <div class="shadow-lg p-3 bg-white rounded">
                 <form method="POST" id="form" name="form" action="TransporterController">
                     <div class="mt-3 mb-5 mx-4">
-                        <img src="images/Imagen2.png" class="rounded mx-auto d-block"   height="200" alt="...." >
-                        <h2 class="display-4 text-center my-4">  REGISTRO DEL CONDUCTOR</h2>
+                        <img src="images/Imagen2.png" class="rounded mx-auto d-block"   height="130" alt="...." >
+                        <h2 class="display-4 text-center my-4">  REGISTRO TRANSPORTISTA</h2>
                            <div class="row my-3">
                             <div class="col">
-                                <label for="code">DPI DEL TRANSPORTISTA</label>
+                                <label for="code">DPI del Transportista</label>
                                 <input type="text" class="form-control" placeholder="DPI" name="code" id="code">
                                 <input type="hidden" name="control" value="GUARDAR">
                                  </div>
@@ -120,7 +119,7 @@
                     <small id="emailHelp" class="form-text text-muted">No comparta su correo electrónico con nadie más.</small>
                 </div>
                             <div class="col">
-                                <label for="license">Carnet De Conducir </label>
+                                <label for="license">Carnet de Conducir </label>
                                 <input type="text" class="form-control" placeholder="Carnet" name="license" id="license">
                             </div>
                         </div>
