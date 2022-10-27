@@ -54,9 +54,8 @@ public class TruckController extends HttpServlet {
                 request.getParameter("plate"),
                 request.getParameter("model"),
                 request.getParameter("trans"),       
-                request.getParameter("capacity"),
-                    time.getDay(),
-                       time.getDay());
+                request.getParameter("capacity"));
+                   
                       
                 registerTruck.registerTruck(truck);//almacenarlo en BD      
         }

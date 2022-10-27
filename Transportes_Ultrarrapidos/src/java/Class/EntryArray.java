@@ -34,16 +34,20 @@ public class EntryArray{
     
     public String registerEntry(Entry entry){  
      
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(hora, dia, origen, tipo_carga, id_bodega) ";
-             sql += " VALUES( ?,?,?,?,?)"; 
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(id_dpi_piloto, camion_placa, id_predio, id_bodega, hora, dia, origen, tipo_carga,  transportista_id_transportista) ";
+             sql += " VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?)"; 
         try{
             openConnection();
             statement = connection.prepareStatement(sql);
-            statement.setString(1, entry.getTime());
-            statement.setString(2, entry.getDay());
-            statement.setString(5, entry.getDepot());
-            statement.setString(3, entry.getOrigin());
-            statement.setString(4, entry.getCargoType());
+            statement.setString(1, entry.getDpiDriver());
+            statement.setString(2, entry.getPlateTruck());
+            statement.setString(3, entry.getLot());
+            statement.setString(4, entry.getDepot());
+            statement.setString(5, entry.getTime());
+            statement.setString(6, entry.getDay());
+            statement.setString(7, entry.getOrigin());
+            statement.setString(8, entry.getCargoType());
+            statement.setString(9, entry.getTransporter());
             
             int resultado = statement.executeUpdate(); 
             

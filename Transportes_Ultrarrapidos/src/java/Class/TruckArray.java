@@ -31,8 +31,8 @@ public class TruckArray {
     }
     
     public String registerTruck(Truck camion){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa, id_transportista, modelo, capacidad_peso, hora, dia)  ";
-             sql += " VALUES( ?,?,?,?,?,?)"; 
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa, id_transportista, modelo, capacidad_peso)  ";
+             sql += " VALUES( ?,?,?,?)"; 
         try{
             abrirConexion();
             statement = conexion.prepareStatement(sql); 
@@ -40,8 +40,6 @@ public class TruckArray {
             statement.setString(2, camion.getModel());
              statement.setString(3, camion.getTrans());
             statement.setString(4, camion.getCapacity());
-            statement.setString(5, camion.getTime());
-             statement.setString(6, camion.getDay());
             int resultado = statement.executeUpdate(); 
             
                 if(resultado > 0){

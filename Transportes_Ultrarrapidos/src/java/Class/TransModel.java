@@ -11,15 +11,15 @@ public class TransModel{
     private String lastName;
     private String email;
     private String license;
-    private String licensePlate;
+   
     
-    public  TransModel(int code,  String name, String lastName,  String email,  String license, String licensePlate){
+    public  TransModel(int code,  String name, String lastName,  String email,  String license ){
     this.code = code;
     this.name = name;
     this.lastName = lastName;
     this.email = email;
     this.license=license;
-    this.licensePlate=licensePlate;
+   
     }
 
    
@@ -68,14 +68,7 @@ public class TransModel{
         this.email = email;
     }
 
-    public String getlicensePlate() {
-        return licensePlate;
-    }
-
-    public void setlicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
-    }
-
+   
 
    
     

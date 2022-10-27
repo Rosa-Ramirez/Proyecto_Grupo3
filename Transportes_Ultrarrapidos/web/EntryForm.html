@@ -60,11 +60,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item active">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
-                            </li>
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
@@ -95,7 +93,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <img src="images/Imagen2.png" class="rounded mx-auto d-block" width="160" alt="..."/>
                         <h2 class="display-4 text-center my-4"> REGISTRO INGRESO</h2>
                         <div class="row my-3">
-
+                            <div class="col">
+                            <label for="dpiDriver">DPI Piloto</label>
+                            <input type="text" class="form-control" placeholder="DPI del piloto" name="dpiDriver" id="dpiDriver">
+                            </div>
+                            <div class="col">
+                            <label for="dpiTransporter">DPI Transportista</label>
+                            <input type="text" class="form-control" placeholder="DPI del Transportista" name="dpiTransporter" id="dpiTransporter">
+                            </div>
+                            <div class="col">
+                            <label for="plate">Placa</label>
+                            <input type="text" class="form-control" placeholder="Placa del camión" name="plate" id="plate">
+                            </div>
                         </div>
                         <div class="row my-3">
                             <div class="col">
@@ -119,11 +128,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                     <option value="3">Principal El Salvador</option>
                                     <option value="4">Secundaria El Salvador</option>
                                 </select>
+                                </div>
+                            <div class="col">
+                                <label for="lot">Predio</label>
+                                <select class="form-select" id="lot" name="lot">
+                                    <option selected>Predio...</option>
+                                    <option value="1">Guatemala</option>
+                                    <option value="2">El Salvador</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="my-3">
+                        
+                        <div class="row my-3">
+                            <div class="col">
                             <label for="origin">Origen</label>
                             <input type="text" class="form-control" placeholder="Origen de Carga" name="origin" id="origin">
+                            </div>
                         </div>
                         <input type="button" onclick="sendForm()" class="btn btn-outline-success" value="Register">
                         <button type="reset" class="btn btn-outline-danger">Vaciar</button>
