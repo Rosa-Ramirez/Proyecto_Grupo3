@@ -8,14 +8,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 /**
  *
  * @author ramir
  */
-public class EntryArray {
+public class EntryArray{
     Entry[] entryRegister;
     int indexArray;
+    Time time;
     
     private DatabasaConnection connectDB;
     private Connection connection;
@@ -32,18 +32,18 @@ public class EntryArray {
         connection=connectDB.connection();
     }
     
-    public String registerEntry(Entry entry){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(id_bodega, hora, dia, mes_anio, origen, tipo_carga) ";
-             sql += " VALUES(  ?,?,?,?,?,?)"; 
+    public String registerEntry(Entry entry){  
+     
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_ingreso(hora, dia, origen, tipo_carga, id_bodega) ";
+             sql += " VALUES( ?,?,?,?,?)"; 
         try{
             openConnection();
-            statement = connection.prepareStatement(sql); 
-            statement.setString(2, entry.getTime());
-            statement.setInt(3, entry.getDay());
-            statement.setString(4, entry.getMonthYear());
-            statement.setString(5, entry.getOrigin());
-            statement.setString(6, entry.getCargoType());
-            statement.setString(1, entry.getDepot());
+            statement = connection.prepareStatement(sql);
+            statement.setString(1, entry.getTime());
+            statement.setString(2, entry.getDay());
+            statement.setString(5, entry.getDepot());
+            statement.setString(3, entry.getOrigin());
+            statement.setString(4, entry.getCargoType());
             
             int resultado = statement.executeUpdate(); 
             

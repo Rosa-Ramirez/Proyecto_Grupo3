@@ -9,17 +9,17 @@ package Class;
  * @author ramir
  */
 public class Entry {
-    private String time;
-    private int day;
-    private String monthYear;
+    
     private String origin;
     private String cargoType;
     private String depot;
-    public Entry(String time, int day, String monthYear, String origin, String cargoType, String depot) {
+    private String time;
+    private String day;
+    
+    public Entry(String time, String day, String origin, String cargoType, String depot) {
+        this.origin = origin;
         this.time = time;
         this.day = day;
-        this.monthYear = monthYear;
-        this.origin = origin;
         this.cargoType = cargoType;
         this.depot = depot;
     }
@@ -32,22 +32,15 @@ public class Entry {
         this.time = time;
     }
 
-    public int getDay() {
+    public String getDay() {
         return day;
     }
 
-    public void setDay(int day) {
+    public void setDay(String day) {
         this.day = day;
     }
-
-    public String getMonthYear() {
-        return monthYear;
-    }
-
-    public void setMonthYear(String monthYear) {
-        this.monthYear = monthYear;
-    }
    
+    
     public String getOrigin() {
         return origin;
     }

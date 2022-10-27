@@ -1,0 +1,90 @@
+<%-- 
+    Document   : TruckForm
+    Created on : 18/10/2022, 14:44:03
+    Author     : Fernanda Cordón
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Driver Record</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/script.js"></script>
+
+       
+           <style>
+           *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                min-height: 100vh;
+                background-image: url(./images/carretera.jpg);
+                background-size: 100%;
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .header .navbar {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 10%;
+                background: rgba(0,0,0,0.6);
+                font-family:sans-serif;
+            }   
+        </style>
+       
+    </head>
+    <body>
+        <div class="d-flex justify-content-around mx-4 my-5">
+             
+            <div class="shadow-lg p-3 bg-white rounded">
+                <form method="POST" id="form" name="form" action="NewServlet">
+                    <div class="mt-3 mb-5 mx-4">
+                        <img src="images/Imagen2.png" class="rounded mx-auto d-block" width="100" alt="...">
+                        <h2 class="display-4 text-center my-4">  REGISTRO DEL CAMIÓN</h2>
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="Placa">Código del camión</label>
+                                <input type="text" class="form-control" placeholder="Código" name="Placa" id="Placa">
+                                <input type="hidden" name="control" value="GUARDAR">
+                            </div>
+                            <div class="col">
+                                <label for="Matricula">Matrícula</label>
+                                <input type="text" class="form-control" placeholder="No. de Matrícula" name="Matricula" id="Matricula">
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="Modelo">Tipo de carga </label>
+                                <input type="text" class="form-control" placeholder="Carga" name="Modelo" id="Modelo">
+                            </div>
+                            <div class="col">
+                                <label for="Capacidad_peso">Número de bodega</label>
+                                <input type="text" class="form-control" placeholder="No. de bodega" name="Capacidad_peso" id="Capacidad_peso">
+                            </div>
+                        </div>
+                        <div class="my-3">
+                            <label for="Hora">Hora de ingreso</label>
+                            <input type="text" class="form-control" placeholder="12:00" name="Hora" id="Hora">
+                        </div>
+                     <input type="button" onclick="enviarFormularioOpcion2()" class="btn btn-outline-success" value="Register">
+                        <button type="reset" class="btn btn-outline-danger">Vaciar</button>
+                         
+                    
+                    </div>
+                </form>
+        </div>
+    </body>
+</html>
