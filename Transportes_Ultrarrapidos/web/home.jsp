@@ -16,6 +16,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+       <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                min-height: 100vh;
+                background-image: radial-gradient(circle at 87.5% 12.5%, #5b96ff 0, #1c4884 50%, #00001b 100%);
+                background-size: 100%;
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .header .navbar {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 10%;
+                background: rgba(0,0,0,0.6);
+                font-family:sans-serif;
+
+            }
+
+        </style>  
+    
+    
+    
     <% 
         response.setHeader("Cache-Control", "nocache, no-store, must-revalidate");
         if(session.getAttribute("user")==null){
@@ -26,18 +56,19 @@
         <header class="header">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">
+                        <img src="https://materilejuguetes.com/img/entrega.png" width="60" height="60" alt="">
+                        Transportes Ultrarrápidos
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item active">
+                        <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
+                           
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
@@ -46,20 +77,14 @@
                                     <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
                                     <li><a class="dropdown-item" href="DriverForm.html">Registrar Piloto</a></li>
                                     <li><a class="dropdown-item" href="TruckForm.html">Registrar Camión</a></li>
-                                    <li><a class="dropdown-item" href="EntryForm.html">Registrar Ingreso</a></li>
                                     <li><a class="dropdown-item" href="TransporterForm.jsp">Registrar Transportista</a></li>
-                                    <li><a class="dropdown-item" href="Report.jsp">Reporte</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="Logout">Cerrar Sesion - ${UsuarioLogueado}</a></li>
+                                    <li><a class="dropdown-item" href="login.jsp">Iniciar sesión o Registrarse</a></li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <a class="btn btn-outline-success"  href="Logout">Cerrar Sesion</a>
                         </form>
                     </div>
                 </div>

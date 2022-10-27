@@ -5,6 +5,7 @@
 
 import Class.Egress;
 import Class.EgressArray;
+import Class.Time;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -21,6 +22,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class EgressController extends HttpServlet {
 Egress egress;
 EgressArray registerEgress;
+Time time;
 StringBuffer objectResponse = new StringBuffer();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,13 +43,17 @@ StringBuffer objectResponse = new StringBuffer();
 
                            if(control.toUpperCase().equals("SAVE")){
                                     egress = new Egress(
-                                             request.getParameter("time"),
-                                             Integer.parseInt(request.getParameter("day")),
-                                            request.getParameter("monthYear"),
-                                            request.getParameter("destiny"),
-                                            request.getParameter("cargoType"),
-                                            request.getParameter("depot") 
-                                    );
+                              
+                                       Integer.parseInt(request.getParameter("lot")),
+                                            Integer.parseInt(request.getParameter("depot")),
+                                            request.getParameter("plate"),
+                                            Integer.parseInt(request.getParameter("dpiTransporter")),
+                                            time.getTime(),
+                                            time.getDay(),
+                                            request.getParameter("destination"),
+                                            request.getParameter("cargoType"));
+                                            
+                         
                                              registerEgress.registerEgress(egress);
                            }
                            else if(control.toUpperCase().equals("DELETE")){

@@ -8,53 +8,30 @@ package Class;
  *
  * @author ramir
  */
-public class Egress {
-    private String time;
-    private int day;
-    private String monthYear;
-    private String destiny;
-    private String cargoType;
-    private String depot;
+public class Egress{
     
-    public Egress(String time, int day, String monthYear, String destiny, String cargoType, String depot) {
-        this.time = time;
-        this.day = day;
-        this.monthYear = monthYear;
-        this.destiny = destiny;
-        this.cargoType = cargoType;
-        this.depot = depot;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
-    public String getMonthYear() {
-        return monthYear;
-    }
-
-    public void setMonthYear(String monthYear) {
-        this.monthYear = monthYear;
-    }
    
-    public String getDestiny() {
-        return destiny;
-    }
-
-    public void setDestiny(String destiny) {
-        this.destiny = destiny;
+    private String cargoType;
+    private int trans;
+    private String destiny;
+    private String plateTruck;
+    private int lot;
+    private String time;
+    private String day;
+    private int depot;
+    
+    public Egress (int lot, int depot,String plateTruck,int trans, String time, String day, String destiny, String cargoType ) {
+       this.lot=lot;
+       this.depot=depot;
+       this.plateTruck=plateTruck;
+       this.trans=trans;
+       this.time=time;
+       this.day=day;
+      this.destiny=destiny;
+       this.cargoType=cargoType;
+       
+       
+        
     }
 
     public String getCargoType() {
@@ -65,12 +42,60 @@ public class Egress {
         this.cargoType = cargoType;
     }
 
-    public String getDepot() {
+    public int getTrans() {
+        return trans;
+    }
+
+    public void setTrans(int trans) {
+        this.trans = trans;
+    }
+
+    public String getDestiny() {
+        return destiny;
+    }
+
+    public void setDestiny(String destiny) {
+        this.destiny = destiny;
+    }
+
+    public String getPlateTruck() {
+        return plateTruck;
+    }
+
+    public void setPlateTruck(String plateTruck) {
+        this.plateTruck = plateTruck;
+    }
+
+    public int getLot() {
+        return lot;
+    }
+
+    public void setLot(int lot) {
+        this.lot = lot;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public int getDepot() {
         return depot;
     }
 
-    public void setDepot(String depot) {
+    public void setDepot(int depot) {
         this.depot = depot;
     }
-    
+
 }

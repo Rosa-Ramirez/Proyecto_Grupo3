@@ -12,6 +12,7 @@ public class TransModel {
     private String email;
     private String license;
 
+
     public TransModel(int code, String name, String lastName, String email, String license) {
         this.code = code;
         this.name = name;
@@ -59,6 +60,7 @@ public class TransModel {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
 
 }

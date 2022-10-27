@@ -38,27 +38,6 @@ public class TransporterController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
 
-            registerTrans = new TransArray();
-
-            String control = request.getParameter("control");
-            if (control.toUpperCase().equals("GUARDAR")) {
-                trans = new TransModel(
-                        Integer.parseInt(request.getParameter("code")),
-                        request.getParameter("name"),
-                        request.getParameter("lastname"),
-                        request.getParameter("email"),
-                        request.getParameter("license")
-                );
-                registerTrans.saveTrans(trans);
-            } else if (control.toUpperCase().equals("ELIMINAR")) {
-                int codeDelete = Integer.parseInt(request.getParameter("id_Transportista"));
-                registerTrans.deleteTrans(codeDelete);
-
-            }
-
-            out.write(objectResponse.toString());
-
-        }
 
     }
 
