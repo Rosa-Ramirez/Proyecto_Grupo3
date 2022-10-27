@@ -4,23 +4,22 @@
  */
 package Class;
 
+public class TransModel {
 
-public class TransModel{
     private int code;
     private String name;
     private String lastName;
     private String email;
     private String license;
-    
-    public  TransModel(int code,  String name, String lastName,  String email,  String license){
-    this.code = code;
-    this.name = name;
-    this.lastName = lastName;
-    this.email = email;
-    this.license=license;
-    }
 
-   
+
+    public TransModel(int code, String name, String lastName, String email, String license) {
+        this.code = code;
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.license = license;
+    }
 
     public int getCode() {
         return code;
@@ -30,10 +29,6 @@ public class TransModel{
         this.code = code;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public String getLicense() {
         return license;
     }
@@ -41,8 +36,10 @@ public class TransModel{
     public void setLicense(String license) {
         this.license = license;
     }
-
-
+    
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -55,8 +52,6 @@ public class TransModel{
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    
- 
 
     public String getEmail() {
         return email;
@@ -67,6 +62,5 @@ public class TransModel{
     }
 
 
-   
-    
+
 }

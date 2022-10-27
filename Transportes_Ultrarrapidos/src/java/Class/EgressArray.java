@@ -33,17 +33,19 @@ public class EgressArray {
     }
     
     public String registerEgress(Egress egress){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_egreso( id_bodega, hora, dia, mes_anio, destino, tipo_carga) ";
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_egreso( id_predio, id_bodega, camion_placa_camion, transportista_id_transportista, hora, dia, destino,) ";
              sql += " VALUES(  ?,?,?,?,?,?)"; 
         try{
             openConnection();
             statement = connection.prepareStatement(sql); 
-            statement.setString(1, egress.getDepot());
-            statement.setString(2, egress.getTime());
-            statement.setInt(3, egress.getDay());
-            statement.setString(4, egress.getMonthYear());
-            statement.setString(5, egress.getDestiny());
-            statement.setString(6, egress.getCargoType());
+            statement.setInt(1, egress.getLot());
+             statement.setInt(2, egress.getDepot());
+              statement.setString(3, egress.getPlateTruck());
+               statement.setInt(4, egress.getTrans());
+            statement.setString(5, egress.getTime());
+             statement.setString(6, egress.getDay());
+              statement.setString(7, egress.getDestiny());
+            statement.setString(8, egress.getCargoType());
             
             int resultado = statement.executeUpdate(); 
             

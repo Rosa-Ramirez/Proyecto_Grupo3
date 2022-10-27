@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/EgressController.java</file>
-            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/index.jsp</file>
-            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/Class/DatabasaConnection.java</file>
-            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/LoginServlet.java</file>
-            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/EntryController.java</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/EntryForm.html</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/EgressForm.html</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/Class/TransArray.java</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/home.jsp</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/TruckForm.html</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/DriverForm.html</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/src/java/Class/Time.java</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/TransporterForm.jsp</file>
+            <file>file:/C:/Users/Hatziry%20Chacón/Documents/NetBeansProjects/Proyecto_Grupo3/Transportes_Ultrarrapidos/web/homeStyle.css</file>
         </group>
     </open-files>
 </project-private>

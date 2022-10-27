@@ -10,61 +10,57 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TransArray {
-    
+
     TransModel[] transTable;
     int indexArray;
-    
+
     private DatabasaConnection conectDB;
     private Connection connection;
     private PreparedStatement statement = null;
     private ResultSet result = null;
-    
- 
-  
-    public void openConnection(){
-       conectDB= new DatabasaConnection ();
-        connection=conectDB.connection();
+
+    public void openConnection() {
+        conectDB = new DatabasaConnection();
+        connection = conectDB.connection();
     }
 
-    public String saveTrans( TransModel trans){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.transportista(id_transportista,  nombre, apellido, correo, carne_de_conducir)  ";
-             sql += " VALUES(  ?,?,?,?,?)"; 
-        try{
+    public String saveTrans(TransModel trans) {
+        String sql = "INSERT INTO  transportes_ultrarrapidos_sa.transportista(id_transportista, nombre, apellido, correo, carne_de_conducir)  ";
+        sql += " VALUES(  ?,?,?,?,?)";
+        try {
             openConnection();
-            statement = connection.prepareStatement(sql); 
+            statement = connection.prepareStatement(sql);
             statement.setInt(1, trans.getCode());
             statement.setString(2, trans.getName());
             statement.setString(3, trans.getLastName());
             statement.setString(4, trans.getEmail());
-             statement.setString(5, trans.getLicense());
-            int resultado = statement.executeUpdate(); 
-            
-                if(resultado > 0){
-                    return String.valueOf(resultado);
-                }else{
-                    return String.valueOf(resultado);
-                }
-        }catch(SQLException e){
+            statement.setString(5, trans.getLicense());
+            int resultado = statement.executeUpdate();
+
+            if (resultado > 0) {
+                return String.valueOf(resultado);
+            } else {
+                return String.valueOf(resultado);
+            }
+        } catch (SQLException e) {
             return e.getMessage();
-        }    
+        }
     }
-    
-    
-    
-  public String deleteTrans(int transId){
+
+    public String deleteTrans(int transId) {
         String sql = "DELETE FROM transportes_ultrarrapidos_sa.transportista WHERE id_transportista = " + transId;
-        try{
+        try {
             openConnection();
             statement = connection.prepareStatement(sql);
             int resultado = statement.executeUpdate();
-            if(resultado > 0){
+            if (resultado > 0) {
                 return String.valueOf(resultado);
-            }else{
+            } else {
                 return String.valueOf(resultado);
             }
-        }catch(SQLException e){
-                    return e.getMessage();
-                    }
+        } catch (SQLException e) {
+            return e.getMessage();
+        }
     }
-    
+
 }

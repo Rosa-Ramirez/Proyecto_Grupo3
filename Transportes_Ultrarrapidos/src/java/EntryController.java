@@ -37,24 +37,28 @@ StringBuffer objectResponse = new StringBuffer();
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-         /* TODO output your page here. You may use following sample code. */
-           registerEntry= new EntryArray();
+            time = new Time();
+            registerEntry= new EntryArray();
+         
                            String control = request.getParameter("control");
+
                            if(control.toUpperCase().equals("SAVE")){
-                                    entry = new Entry(
+                               entry = new Entry(
+                                       time.getTime(),
+                                            time.getDay(),
                                             request.getParameter("origin"),
                                             request.getParameter("cargoType"),
-                                            request.getParameter("depot") 
+                                            request.getParameter("depot"),
+                                            request.getParameter("dpiDriver"),
+                                            request.getParameter("plate"),
+                                            request.getParameter("dpiTransporter"),
+                                            request.getParameter("lot")
                                     );
+                                    
                                              registerEntry.registerEntry(entry);
                                              
                            }
-                           else if(control.toUpperCase().equals("DELETE")){
-                                    int codeDelete = Integer.parseInt(request.getParameter("id_registro_ingreso"));
-                                    registerEntry.deleteEntry(codeDelete);
-                           }
                         out.write(objectResponse.toString());
-
         }
     }
 
