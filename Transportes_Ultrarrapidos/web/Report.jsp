@@ -103,9 +103,12 @@
         <div class="container mx-auto">
             <div class="d-flex justify-content-end mx-5 my-4">
                <form class="d-flex " role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                   <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="txtSearch">
+                            <input class="btn btn-outline-success" type="submit" value="Buscar">
                         </form>
+                <%
+                            String search=request.getParameter("txtSearch")
+                %>
                 </div>
             <div class="table-responsive mx-4 my-4">
         <table class="table table-hover table-dark">

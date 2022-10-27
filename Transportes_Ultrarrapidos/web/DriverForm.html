@@ -46,46 +46,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">
-                    <img src="https://materilejuguetes.com/img/entrega.png" width="60" height="60" alt="">
-                    Transportes Ultrarrápidos
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <a href="DriverForm.html" class="dropdown-item" >Registro Piloto</a>
-                                <a href="TruckForm.html" class="dropdown-item" >Registro Camion</a>
-                                <a href="#" class="dropdown-item" >Registro Transportista</a>
-                                <a href="#" class="dropdown-item" >Registro Ingreso</a>
-                                <a href="EgressForm.html" class="dropdown-item" >Registro Egreso</a>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item" >Login</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Contact</a>
-                        </li>
-
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-info mx-2" type="submit">Search</button>
-                    </form>
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://materilejuguetes.com/img/entrega.png" width="60" height="60" alt="">
+                        Transportes Ultrarrápidos
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" id="menu-navbar">
+                                    <li><a class="dropdown-item" href="TransporterForm.jsp">Registrar Transportista</a></li>
+                                    <li><a class="dropdown-item" href="TruckForm.html">Registrar Camión</a></li>
+                                    <li><a class="dropdown-item" href="EntryForm.html">Registrar Ingreso</a></li>
+                                    <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
+                                    
+                                    
+                                    
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="login.jsp">Iniciar sesión o Registrarse</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <a class="btn btn-outline-success"  href="Logout">Cerrar Sesion</a>
+                        </form>
+                    </div>
                 </div>
             </nav>
         </header>
