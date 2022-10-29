@@ -9,19 +9,27 @@ package Class;
  * @author ramir
  */
 public class Entry {
-    private String time;
-    private int day;
-    private String monthYear;
+    
     private String origin;
     private String cargoType;
     private String depot;
-    public Entry(String time, int day, String monthYear, String origin, String cargoType, String depot) {
+    private String dpiDriver;
+    private String plateTruck;
+    private String transporter;
+    private String lot;
+    private String time;
+    private String day;
+    
+    public Entry(String time, String day, String origin, String cargoType, String depot, String dpiDriver, String plateTruck, String transporter, String lot) {
+        this.origin = origin;
         this.time = time;
         this.day = day;
-        this.monthYear = monthYear;
-        this.origin = origin;
         this.cargoType = cargoType;
         this.depot = depot;
+        this.dpiDriver = dpiDriver;
+        this.plateTruck = plateTruck;
+        this.transporter = transporter;
+        this.lot = lot;
     }
 
     public String getTime() {
@@ -32,22 +40,22 @@ public class Entry {
         this.time = time;
     }
 
-    public int getDay() {
+    public String getDay() {
         return day;
     }
 
-    public void setDay(int day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
-    public String getMonthYear() {
-        return monthYear;
+    public String getDpiDriver() {
+        return dpiDriver;
     }
 
-    public void setMonthYear(String monthYear) {
-        this.monthYear = monthYear;
+    public void setDpiDriver(String dpiDriver) {
+        this.dpiDriver = dpiDriver;
     }
-   
+    
     public String getOrigin() {
         return origin;
     }
@@ -71,5 +79,31 @@ public class Entry {
     public void setDepot(String depot) {
         this.depot = depot;
     }
+
+    public String getPlateTruck() {
+        return plateTruck;
+    }
+
+    public void setPlateTruck(String plateTruck) {
+        this.plateTruck = plateTruck;
+    }
+
+    public String getTransporter() {
+        return transporter;
+    }
+
+    public void setTransporter(String transporter) {
+        this.transporter = transporter;
+    }
+
+    public String getLot() {
+        return lot;
+    }
+
+    public void setLot(String lot) {
+        this.lot = lot;
+    }
+    
+    
     
 }

@@ -7,19 +7,17 @@ package Class;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 /**
  *
  * @author ramir
  */
-class DatabasaConnection {
-    protected String url="jdbc:mysql://localhost:3306/transportes_ultrarrápidos_sa";//url de MySQL
+public class DatabasaConnection {
+        protected String url="jdbc:mysql://localhost:3306/transportes_ultrarrapidos_sa";//url de MySQL
     private final String usuario="root";
-    private final String clave="MySQLServer_Rouss154!";
+    private final String clave="Daniel2121";
     Connection conn=null;  
+    
     public Connection connection(){
-        
-        
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn=DriverManager.getConnection( url, usuario,clave);
@@ -28,4 +26,5 @@ class DatabasaConnection {
         }         
         return conn;        
     }
+    
 }
