@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<<<<<<< RosyBranch
           <head>
                     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
                     <!-- JavaScript Bundle with Popper -->
@@ -39,6 +40,102 @@
                                                                       <li class="nav-item active">
                                                                                 <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
                                                                       </li>
+=======
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link href="homeStyle.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+       <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                min-height: 100vh;
+                background-image: radial-gradient(circle at 87.5% 12.5%, #5b96ff 0, #1c4884 50%, #00001b 100%);
+                background-size: 100%;
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .header .navbar {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 10%;
+                background: rgba(0,0,0,0.6);
+                font-family:sans-serif;
+
+            }
+
+        </style>  
+    
+    
+    
+    <% 
+        response.setHeader("Cache-Control", "nocache, no-store, must-revalidate");
+        if(session.getAttribute("user")==null){
+            response.sendRedirect("/index.jsp");
+        }
+    %>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://materilejuguetes.com/img/entrega.png" width="60" height="60" alt="">
+                        Transportes Ultrarrápidos
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item active">
+                        <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
+                            </li>
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" id="menu-navbar">
+                                    <li><a class="dropdown-item" href="EgressForm.html">Registrar Egreso</a></li>
+                                    <li><a class="dropdown-item" href="DriverForm.html">Registrar Piloto</a></li>
+                                    <li><a class="dropdown-item" href="TruckForm.html">Registrar Camión</a></li>
+                                    <li><a class="dropdown-item" href="TransporterForm.jsp">Registrar Transportista</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="login.jsp">Iniciar sesión o Registrarse</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <a class="btn btn-outline-success"  href="Logout">Cerrar Sesion</a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" >
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner" id="carousel"  >
+                    <div class="carousel-item active" id="sims" data-bs-interval="10000">
+>>>>>>> master
 
                                                                       <li class="nav-item dropdown">
                                                                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

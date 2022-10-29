@@ -31,7 +31,11 @@ public class TruckArray {
     }
     
     public String registerTruck(Truck camion){        
+<<<<<<< RosyBranch
         String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa_camion, transportista_id_transportista, modelo, capacidad_peso)  ";
+=======
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa, id_transportista, modelo, capacidad_peso)  ";
+>>>>>>> master
              sql += " VALUES( ?,?,?,?)"; 
         try{
             abrirConexion();

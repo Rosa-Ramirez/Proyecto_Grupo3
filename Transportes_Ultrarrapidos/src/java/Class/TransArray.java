@@ -27,7 +27,11 @@ public class TransArray {
     }
 
     public String saveTrans( TransModel trans){        
+<<<<<<< RosyBranch
     String sql = "INSERT INTO  transportes_ultrarrapidos_sa.transportista(id_transportista, nombre, apellido, correo, carne_de_conducir)  ";
+=======
+
+>>>>>>> master
              sql += " VALUES(  ?,?,?,?,?)"; 
         try{
             openConnection();

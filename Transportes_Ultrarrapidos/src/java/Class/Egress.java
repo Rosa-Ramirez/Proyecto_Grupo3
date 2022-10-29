@@ -20,7 +20,11 @@ public class Egress{
     private String day;
     private int depot;
     
+<<<<<<< RosyBranch
     public Egress (int lot, int depot, String plateTruck,int trans, String time, String day, String destiny, String cargoType ) {
+=======
+    public Egress (int lot, int depot,String plateTruck,int trans, String time, String day, String destiny, String cargoType ) {
+>>>>>>> master
        this.lot=lot;
        this.depot=depot;
        this.plateTruck=plateTruck;

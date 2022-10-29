@@ -51,8 +51,12 @@ StringBuffer objectResponse = new StringBuffer();
                                             time.getTime(),
                                             time.getDay(),
                                             request.getParameter("destination"),
+<<<<<<< RosyBranch
                                             request.getParameter("cargoType")
                                     );
+=======
+                                            request.getParameter("cargoType"));
+>>>>>>> master
                                             
                          
                                              registerEgress.registerEgress(egress);

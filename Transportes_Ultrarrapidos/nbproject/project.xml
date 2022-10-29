@@ -8,6 +8,7 @@
             <web-module-libraries>
                 <library dirs="200">
                     <file>${&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD}</file>
+<<<<<<< RosyBranch
                 </library>
                 <library dirs="200">
                     <file>${file.reference.mysql-connector-java-8.0.30.jar-2}</file>
@@ -15,6 +16,11 @@
                 </library>
                 <library dirs="200">
                     <file>${libs.jakartaee-web-api-9.0.classpath}</file>
+=======
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.mysql-connector-java-8.0.30.jar}</file>
+>>>>>>> master
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>

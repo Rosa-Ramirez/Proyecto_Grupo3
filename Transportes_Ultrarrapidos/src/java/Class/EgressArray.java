@@ -33,8 +33,13 @@ public class EgressArray {
     }
     
     public String registerEgress(Egress egress){        
+<<<<<<< RosyBranch
         String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_egreso(id_predio, id_bodega, camion_placa_camion, transportista_id_transportista, hora, dia, destino, tipo_carga) ";
              sql += " VALUES(  ?,?,?,?,?,?,?,?)"; 
+=======
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.registro_egreso( id_predio, id_bodega, camion_placa_camion, transportista_id_transportista, hora, dia, destino,) ";
+             sql += " VALUES(  ?,?,?,?,?,?)"; 
+>>>>>>> master
         try{
             openConnection();
             statement = connection.prepareStatement(sql); 

@@ -42,6 +42,7 @@ public class TransporterController extends HttpServlet {
          
                            String control = request.getParameter("control");
 
+<<<<<<< RosyBranch
                            if(control.toUpperCase().equals("SAVE")){
                                trans = new TransModel(
                                             Integer.parseInt(request.getParameter("code")),
@@ -55,6 +56,8 @@ public class TransporterController extends HttpServlet {
                                              
                            }
                         out.write(objectResponse.toString());
+=======
+>>>>>>> master
 
     }
         
