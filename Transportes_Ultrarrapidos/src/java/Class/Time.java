@@ -4,26 +4,24 @@
  */
 package Class;
 
-import java.util.Calendar;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
  * @author ramir
  */
 public class Time {
-    Calendar calendar = Calendar.getInstance();
-    int hour, minute, day, month, year;
-    
-    public String getTime(){
-        this.hour = calendar.get(Calendar.HOUR_OF_DAY);
-        this.minute = calendar.get(Calendar.MINUTE);
-        return hour + ":" + minute;
-    }
-    
-    public String getDay(){
-        this.day = calendar.get(Calendar.DAY_OF_MONTH);
-        this.month = calendar.get(Calendar.MONTH);
-        this.year = calendar.get(Calendar.YEAR);
-        return day + "/" + month + "/" + year;
-    }
+
+          String hour, day;
+
+          public String getTime() {
+                    this.hour = ZonedDateTime.now().format(DateTimeFormatter.ofPattern("hh:mm"));
+                    return hour;
+          }
+
+          public String getDay() {
+                    this.day = ZonedDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyy"));
+                    return day;
+          }
 }

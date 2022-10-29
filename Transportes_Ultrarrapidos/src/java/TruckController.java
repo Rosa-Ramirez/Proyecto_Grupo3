@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import Class.Time;
 import Class.TruckArray;
 import Class.Truck;
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class TruckController extends HttpServlet {
     Truck truck;
     TruckArray registerTruck;
     StringBuffer obcjectResponse = new StringBuffer();
+    Time time;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -48,10 +50,13 @@ public class TruckController extends HttpServlet {
            String control = request.getParameter("control");
            if(control.toUpperCase().equals("GUARDAR")){
                truck=new Truck(
+                     
                 request.getParameter("plate"),
                 request.getParameter("model"),
-                request.getParameter("capacity"),
-                request.getParameter("time")); 
+                request.getParameter("trans"),       
+                request.getParameter("capacity"));
+                   
+                      
                 registerTruck.registerTruck(truck);//almacenarlo en BD      
         }
             else if(control.toUpperCase().equals("DELETE")){

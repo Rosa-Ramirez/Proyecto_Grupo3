@@ -13,7 +13,7 @@ public class TruckArray {
     
      Truck[] clientTable;
       int indexArray;
-    
+    Time time;
     private DatabasaConnection conectorBD;
     private Connection conexion;
     private PreparedStatement statement = null;
@@ -31,15 +31,15 @@ public class TruckArray {
     }
     
     public String registerTruck(Truck camion){        
-        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa, modelo, capacidad_peso, hora)  ";
+        String sql = "INSERT INTO transportes_ultrarrapidos_sa.camion(placa_camion, transportista_id_transportista, modelo, capacidad_peso)  ";
              sql += " VALUES( ?,?,?,?)"; 
         try{
             abrirConexion();
             statement = conexion.prepareStatement(sql); 
             statement.setString(1, camion.getPlate());
             statement.setString(2, camion.getModel());
-            statement.setString(3, camion.getCapacity());
-            statement.setString(4, camion.getTime());
+             statement.setString(3, camion.getTrans());
+            statement.setString(4, camion.getCapacity());
             int resultado = statement.executeUpdate(); 
             
                 if(resultado > 0){

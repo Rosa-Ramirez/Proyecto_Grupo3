@@ -43,7 +43,7 @@ public class DriverController extends HttpServlet {
                 driver = new Driver(
                         Integer.parseInt(request.getParameter("dpi")),
                         request.getParameter("name"),
-                        request.getParameter("lastName"),
+                        request.getParameter("lastname"),
                         Integer.parseInt(request.getParameter("phone")),
                         request.getParameter("address")
                 );

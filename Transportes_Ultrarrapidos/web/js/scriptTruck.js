@@ -34,7 +34,7 @@ function showMessage(message){
   width: 600,
   padding: '3em',
   color: '#716add',
-  background: '#fff url(./images/truckWallpaperAlert.png)',
+  background: '#fff url(./images/wallAlert.png)',
   backdrop: `
     rgba(0,0,123,0.4)
     url("images/truckGif.gif")

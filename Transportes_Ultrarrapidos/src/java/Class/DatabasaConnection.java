@@ -7,7 +7,6 @@ package Class;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 /**
  *
  * @author ramir
@@ -17,8 +16,8 @@ public class DatabasaConnection {
     private final String usuario="root";
     private final String clave="root";
     Connection conn=null;  
+    
     public Connection connection(){
-        
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn=DriverManager.getConnection( url, usuario,clave);
@@ -27,4 +26,5 @@ public class DatabasaConnection {
         }         
         return conn;        
     }
+    
 }
