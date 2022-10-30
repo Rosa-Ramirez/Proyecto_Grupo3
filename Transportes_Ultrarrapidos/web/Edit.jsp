@@ -94,7 +94,7 @@
                                                             <div class="row my-3">
                                                                       <div class="col">
                                                                                 <label for="code">DPI DEL TRANSPORTISTA</label>
-                                                                                <input type="text" class="form-control" placeholder="DPI" name="code" id="code" value="<%= rs.getInt("id_transportista")%>">
+                                                                                <input type="text" class="form-control" placeholder="DPI" name="code" id="code" value="<%= rs.getString("id_transportista")%>">
                                                                                 <input type="hidden" name="control" value="SAVE">
                                                                       </div>
                                                             </div>
@@ -116,7 +116,7 @@
                                                                       </div>
                                                                       <div class="col">
                                                                                 <label for="license">Carnet De Conducir </label>
-                                                                                <input type="text" class="form-control" placeholder="Carnet" name="license" id="license" value="<%= rs.getInt("carne_de_conducir")%>">
+                                                                                <input type="text" class="form-control" placeholder="Carnet" name="license" id="license" value="<%= rs.getString("carne_de_conducir")%>">
                                                                       </div>
                                                             </div>
                                                             <div class="contenido">
@@ -143,6 +143,6 @@
 if (dpi!=null && name!=null && lastName!=null && email!=null && license!=null){
                     ps = con.prepareStatement("update transportista set id_transportista='" + dpi + "',  nombre='" + name + "',  apellido='" + lastName + "', correo='" + email + "', carne_de_conducir='" + license +"' where id_transportista='"+id+"'");
                     ps.executeUpdate();
-                    response.sendRedirect("Report.jsp");
+                    response.sendRedirect("TransporterReport.jsp");
           }
 %>
